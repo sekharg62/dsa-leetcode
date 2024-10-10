@@ -13,7 +13,7 @@ public:
         stack<int> st;
         int n = nums.size();
 
-        // Step 1: Build a decreasing stack of indices
+        
         for (int i = 0; i < n; i++)
         {
             if (st.empty() || nums[st.top()] > nums[i])
@@ -24,7 +24,7 @@ public:
 
         int maxRamp = 0;
 
-        // Step 2: Traverse the array from the end and calculate the ramp
+        
         for (int j = n - 1; j >= 0; j--)
         {
             while (!st.empty() && nums[st.top()] <= nums[j])
